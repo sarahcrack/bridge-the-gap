@@ -16,9 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <ChooseCategory />
-      <ContributeResource />
+      <ContributeResource onContribute={handleContribution}/>
       <DisplayResources resources={resources} />
     </div>
   );
