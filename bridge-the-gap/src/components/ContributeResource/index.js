@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function ContributeResource({ resources, setResources }) {
   const [contributor, setContributor] = useState("");
@@ -21,6 +20,7 @@ function ContributeResource({ resources, setResources }) {
   }
 
   function handleSubmit(event) {
+    event.preventDefault();
     handleContribute({
       contributor,
       category,
@@ -29,7 +29,6 @@ function ContributeResource({ resources, setResources }) {
       link,
     });
     //console.log(contributor, category, title, description, link);
-    event.preventDefault();
     setContributor("");
     setCategory("");
     setTitle("");
@@ -50,7 +49,8 @@ function ContributeResource({ resources, setResources }) {
       <label htmlFor="category">Category</label>
       <select
         id="category"
-        onChange={(event) => setCategory(event.target.value)} // this needs fixing as you can't change it sometimes
+        value={category}
+        onChange={(event) => setCategory(event.target.value)}
       >
         {categoryList.map((cat) => (
           <option value={cat} key={Math.random()}>
