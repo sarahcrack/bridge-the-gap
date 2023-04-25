@@ -1,31 +1,42 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function ContributeResource({ onContribute }) {
+function ContributeResource({ resources, setResources }) {
   const [contributor, setContributor] = useState("");
-  // const [category, setCategory] = useState("");
-  //make an array with categories and map through it to create a dropdown menu
-  const [category, setCategory] = useState([
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
+  const [category, setCategory] = useState("");
+  const [categoryList, setCategoryList] = useState([
     "Coding",
     "Design",
     "Collaboration",
     "Planning",
-    "Turorials",
+    "Tutorials",
     "Careers",
   ]);
 
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [link, setLink] = useState("");
+  function handleContribute(resource) {
+    setResources([...resources, resource]);
+  }
 
   function handleSubmit(event) {
+    handleContribute({
+      contributor,
+      category,
+      title,
+      description,
+      link,
+    });
+    //console.log(contributor, category, title, description, link);
     event.preventDefault();
-    onContribute({ contributor, category, title, description, link });
     setContributor("");
     setCategory("");
     setTitle("");
     setDescription("");
     setLink("");
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="contribute-header">Contribute a Resource</h2>
@@ -39,10 +50,12 @@ function ContributeResource({ onContribute }) {
       <label htmlFor="category">Category</label>
       <select
         id="category"
-        onChange={(event) => setCategory(event.target.value)}
+        onChange={(event) => setCategory(event.target.value)} // this needs fixing as you can't change it sometimes
       >
-        {category.map((category) => (
-          <option value={category}>{category}</option>
+        {categoryList.map((cat) => (
+          <option value={cat} key={Math.random()}>
+            {cat}
+          </option>
         ))}
       </select>
 

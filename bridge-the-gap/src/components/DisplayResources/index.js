@@ -1,3 +1,6 @@
+import React from "react";
+import "./style.css";
+
 function DisplayResources({ resources }) {
   return (
     // Map through the resources that have been passed down from the APP

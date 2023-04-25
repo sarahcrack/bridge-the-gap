@@ -18,10 +18,6 @@ function App() {
     },
   ]);
 
-  function handleContribute(resource) {
-    //setResources([...resources, resource]);
-  }
-
   return (
     <div>
       <BrowserRouter>
@@ -38,7 +34,9 @@ function App() {
             />
             <Route
               path="/contribute"
-              element={<Contribute onContribute={handleContribute} />}
+              element={
+                <Contribute resources={resources} setResources={setResources} />
+              }
             />
           </Routes>
         </div>
