@@ -4,7 +4,7 @@ function ContributeResource({ onContribute }) {
   const [contributor, setContributor] = useState("");
   // const [category, setCategory] = useState("");
   //make an array with categories and map through it to create a dropdown menu
-  const [category, setCategory] = useState([
+  const [categories, setCategories] = useState([
     "Coding",
     "Design",
     "Collaboration",
@@ -12,16 +12,22 @@ function ContributeResource({ onContribute }) {
     "Turorials",
     "Careers",
   ]);
-
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
-    onContribute({ contributor, category, title, description, link });
+    onContribute({
+      contributor,
+      category: selectedCategory,
+      title,
+      description,
+      link,
+    });
     setContributor("");
-    setCategory("");
+    setSelectedCategory(categories[0]);
     setTitle("");
     setDescription("");
     setLink("");
@@ -39,10 +45,10 @@ function ContributeResource({ onContribute }) {
       <label htmlFor="category">Category</label>
       <select
         id="category"
-        value={category}
-        onChange={(event) => setCategory(event.target.value)}
+        value={selectedCategory}
+        onChange={(event) => setSelectedCategory(event.target.value)}
       >
-        {category.map((category) => (
+        {categories.map((category) => (
           <option value={category}>{category}</option>
         ))}
       </select>
