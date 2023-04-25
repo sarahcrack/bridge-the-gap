@@ -8,6 +8,7 @@ import Nav from "./pages/Nav";
 
 function App() {
   return (
+
     <div>
       <BrowserRouter>
         <nav>
@@ -21,6 +22,11 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+
+    <div className="App">
+      <ContributeResource onContribute={handleContribution}/>
+      <DisplayResources resources={resources} />
+      <ChooseCategory />
     </div>
   );
 }
