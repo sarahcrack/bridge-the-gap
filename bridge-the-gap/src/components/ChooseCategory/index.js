@@ -1,7 +1,11 @@
+import react from 'react';
+import tutorial from '../images/tutorials.png';
+
+
 function ChooseCategory() {
   return (
     <div>
-      <button>Coding</button>
+      <button></button>
       <button>Design</button>
       <button>Tutorials</button>
       <button>Collaborative Tools</button>
