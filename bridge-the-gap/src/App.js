@@ -18,6 +18,7 @@ function App() {
     <div className="App">
       <ContributeResource onContribute={handleContribution}/>
       <DisplayResources resources={resources} />
+      <ChooseCategory />
     </div>
   );
 }
