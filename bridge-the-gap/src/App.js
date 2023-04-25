@@ -5,8 +5,23 @@ import Home from "./pages/Home";
 import Choose from "./pages/Choose";
 import Contribute from "./pages/Contribute";
 import Nav from "./pages/Nav";
+import Display from "./pages/Display";
 
 function App() {
+  const [resources, setResources] = useState([
+    {
+      contributor: "contributor name",
+      category: "Coding",
+      title: "title",
+      description: "a hard coded initial entry for testing",
+      link: "link",
+    },
+  ]);
+
+  function handleContribute(resource) {
+    //setResources([...resources, resource]);
+  }
+
   return (
     <div>
       <BrowserRouter>
@@ -17,7 +32,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/choose" element={<Choose />} />
-            <Route path="/contribute" element={<Contribute />} />
+            <Route
+              path="/display"
+              element={<Display resources={resources} />}
+            />
+            <Route
+              path="/contribute"
+              element={<Contribute onContribute={handleContribute} />}
+            />
           </Routes>
         </div>
       </BrowserRouter>

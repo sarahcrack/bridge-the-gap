@@ -39,7 +39,6 @@ function ContributeResource({ onContribute }) {
       <label htmlFor="category">Category</label>
       <select
         id="category"
-        value={category}
         onChange={(event) => setCategory(event.target.value)}
       >
         {category.map((category) => (
