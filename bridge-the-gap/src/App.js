@@ -1,20 +1,28 @@
-import { useState } from "react";
 import "./App.css";
-import ChooseCategory from "./components/ChooseCategory";
-import HomePage from "./components/HomePage";
-import NavBar from "./components/NavBar";
-import DisplayResources from "./components/DisplayResources";
-import ContributeResource from "./components/ContributeResource";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import Home from "./pages/Home";
+import Choose from "./pages/Choose";
+import Contribute from "./pages/Contribute";
+import Nav from "./pages/Nav";
 
 function App() {
-  // create a resources state to pass down to DisplayResources
-  const [resources, setResources] = useState([]);
-  // create a function to update the resources state called handleContribution
-  function handleContribution(contribution) {
-    setResources([...resources, contribution]);
-  }
-
   return (
+
+    <div>
+      <BrowserRouter>
+        <nav>
+          <Nav />
+        </nav>
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/choose" element={<Choose />} />
+            <Route path="/contribute" element={<Contribute />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+
     <div className="App">
       <ContributeResource onContribute={handleContribution}/>
       <DisplayResources resources={resources} />
