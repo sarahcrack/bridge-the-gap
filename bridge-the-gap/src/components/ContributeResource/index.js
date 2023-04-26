@@ -21,17 +21,6 @@ function ContributeResource({ resources, setResources }) {
   const navigate = useNavigate();
 
   function handleContribute(resource) {
-    // //add http:// to link if it doesn't exist
-    // let link = resource.link;
-    // if (!link.includes("http://") && !link.includes("https://")) {
-    //   link = "https://" + link;
-    // }
-
-    // //update resources object with new link value
-    // //resource.link = link;
-    // setLink(link);
-    // console.log(resource.link);
-
     setResources([...resources, resource]);
   }
 
