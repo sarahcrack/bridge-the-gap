@@ -12,10 +12,10 @@ function HomePage() {
         Bridge the gap in your knowledge!
       </h1>
       <h2>
-        <Link to="/choose">
+        <Link to="/contribute">
           <button className="nav-b">Add a resource</button>
         </Link>
-        <Link to="/contribute">
+        <Link to="/choose">
           <button className="nav-b">Find a resource</button>
         </Link>
       </h2>
