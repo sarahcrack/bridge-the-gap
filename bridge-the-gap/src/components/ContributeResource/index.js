@@ -1,17 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function ContributeResource({ onContribute }) {
+function ContributeResource({ resources, setResources }) {
   const [contributor, setContributor] = useState("");
-  // const [category, setCategory] = useState("");
+
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
+  const [category, setCategory] = useState("");
+  const [categoryList, setCategoryList] = useState([
+
+
   //make an array with categories and map through it to create a dropdown menu
   const [categories, setCategories] = useState([
     "Coding",
     "Design",
     "Collaboration",
     "Planning",
-    "Turorials",
+    "Tutorials",
     "Careers",
   ]);
+
+
+  function handleContribute(resource) {
+    setResources([...resources, resource]);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    handleContribute({
+      contributor,
+      category,
+
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -21,17 +40,19 @@ function ContributeResource({ onContribute }) {
     event.preventDefault();
     onContribute({
       contributor,
-      category: selectedCategory,
+      category,
       title,
       description,
       link,
     });
+
     setContributor("");
-    setSelectedCategory(categories[0]);
+    setCategory("");
     setTitle("");
     setDescription("");
     setLink("");
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="contribute-header">Contribute a Resource</h2>
@@ -45,11 +66,13 @@ function ContributeResource({ onContribute }) {
       <label htmlFor="category">Category</label>
       <select
         id="category"
-        value={selectedCategory}
-        onChange={(event) => setSelectedCategory(event.target.value)}
+        value={category}
+        onChange={(event) => setCategory(event.target.value)}
       >
-        {categories.map((category) => (
-          <option value={category}>{category}</option>
+        {categoryList.map((cat) => (
+          <option value={cat} key={Math.random()}>
+            {cat}
+          </option>
         ))}
       </select>
 

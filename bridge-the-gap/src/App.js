@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Choose from "./pages/Choose";
 import Contribute from "./pages/Contribute";
 import Nav from "./pages/Nav";
+import Display from "./pages/Display";
 import ContributeResource from "./components/ContributeResource";
 import DisplayResources from "./components/DisplayResources";
 
@@ -35,6 +36,7 @@ function App() {
   function handleContribution(contribution) {
     setResources([...resources, contribution]);
   }
+
   return (
     <div>
       <BrowserRouter>
@@ -45,13 +47,20 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/choose" element={<Choose />} />
-            <Route path="/contribute" element={<Contribute />} />
+            <Route
+              path="/display"
+              element={<Display resources={resources} />}
+            />
+            <Route
+              path="/contribute"
+              element={
+                <Contribute resources={resources} setResources={setResources} />
+              }
+            />
           </Routes>
         </div>
       </BrowserRouter>
-      <ContributeResource onContribute={handleContribution} />
-      {/* // pass down the handleContribution function to ContributeResource */}
-      <DisplayResources resources={resources} />
+
     </div>
   );
 }
