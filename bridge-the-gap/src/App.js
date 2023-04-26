@@ -6,17 +6,36 @@ import Choose from "./pages/Choose";
 import Contribute from "./pages/Contribute";
 import Nav from "./pages/Nav";
 import Display from "./pages/Display";
+import ContributeResource from "./components/ContributeResource";
+import DisplayResources from "./components/DisplayResources";
 
 function App() {
-  const [resources, setResources] = useState([
-    {
-      contributor: "contributor name",
-      category: "Coding",
-      title: "title",
-      description: "a hard coded initial entry for testing",
-      link: "link",
-    },
+  // create a resources state to pass down to DisplayResources
+  const [resources, setResources] = useState([{contributor:'bim',
+  category: 'Design',
+  title: 'css tricks',
+  description: 'handy cheatsheet for css',
+  link: 'css-tricks.com'
+   }, {
+    contributor:'paul',
+    category: 'Collaboration',
+    title: 'trello',
+    description: 'create for writing to do lists as tickets for project managing',
+    link: 'trello.com'
+  }, {
+    contributor:'sarah',
+    category: 'Tutorial',
+    title: 'react tutorial for beginners',
+    description: 'react JS tutorials by Programming with Mosh',
+    link: 'https://youtu.be/SqcYOGIETPk'
+  }
   ]);
+
+
+  // create a function to update the resources state called handleContribution
+  function handleContribution(contribution) {
+    setResources([...resources, contribution]);
+  }
 
   return (
     <div>
@@ -41,6 +60,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+
     </div>
   );
 }
