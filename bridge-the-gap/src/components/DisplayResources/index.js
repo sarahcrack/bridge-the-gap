@@ -23,7 +23,7 @@ function DisplayResources({ resources }) {
 
   function getImage(link) {
     switch (true) {
-      case link.includes("youtube"):
+      case link.replace(".", "").includes("youtube"):
         return require("./../../Images/logos/youtube.webp");
       case link.includes("figma"):
         return require("./../../Images/logos/figma.png");
