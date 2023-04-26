@@ -23,17 +23,21 @@ function DisplayResources({ resources }) {
   }
 
   function getImage(link) {
-    // if the link contains a filename in the ./Images/logos folder, return that image
-    if (link.includes("youtube")) {
-      return require("./../../Images/logos/youtube.webp");
-    } else if (link.includes("figma")) {
-      return require("./../../Images/logos/figma.png");
-    } else if (link.includes("trello")) {
-      return require("./../../Images/logos/trello.jpg");
-    } else if (link.includes("canva")) {
-      return require("./../../Images/logos/canva.png");
-    } else {
-      return require("./../../Images/logo.png");
+    switch (true) {
+      case link.includes("youtube"):
+        return require("./../../Images/logos/youtube.webp");
+      case link.includes("figma"):
+        return require("./../../Images/logos/figma.png");
+      case link.includes("trello"):
+        return require("./../../Images/logos/trello.jpg");
+      case link.includes("canva"):
+        return require("./../../Images/logos/canva.png");
+      case link.includes("w3schools"):
+        return require("./../../Images/logos/w3schools.png");
+      case link.includes("miro"):
+        return require("./../../Images/logos/miro.png");
+      default:
+        return require("./../../Images/logo.png");
     }
   }
 
