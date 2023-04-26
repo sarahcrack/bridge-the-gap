@@ -21,6 +21,11 @@
   height: 100px;
 }
 
+.button:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
 .p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
