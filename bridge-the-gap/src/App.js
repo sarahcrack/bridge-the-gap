@@ -30,6 +30,7 @@ function App() {
         </div>
       </BrowserRouter>
       <ContributeResource onContribute={handleContribution} />
+      {/* // pass down the handleContribution function to ContributeResource */}
       <DisplayResources resources={resources} />
     </div>
   );
