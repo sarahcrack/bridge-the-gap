@@ -35,12 +35,6 @@ function ContributeResource({ resources, setResources }) {
       link,
     });
 
-    setContributor("");
-    setCategory("");
-    setTitle("");
-    setDescription("");
-    setLink("");
-
     navigate("/thank-you");
   }
 

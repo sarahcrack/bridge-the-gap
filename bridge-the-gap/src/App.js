@@ -1,16 +1,12 @@
-import "./App.css";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import Home from "./pages/Home";
 import Choose from "./pages/Choose";
 import Contribute from "./pages/Contribute";
 import Nav from "./pages/Nav";
 import Display from "./pages/Display";
-import ContributeResource from "./components/ContributeResource";
-import DisplayResources from "./components/DisplayResources";
-import "./App.css";
-import ThankYou from "./components/ThankYou";
 import Thanks from "./pages/Thanks";
+import "./App.css";
 
 function App() {
   // create a resources state to pass down to DisplayResources
