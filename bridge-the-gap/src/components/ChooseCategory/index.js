@@ -11,40 +11,46 @@ import { Link } from "react-router-dom";
 
 function ChooseCategory() {
   return (
-    <div>
+    <div class= "container">
       <Link to="/display" state={{ section: "Coding" }}>
-        <button>
+        <button class= "button">
           <img src={coding} alt="Coding" />
+          <p class="p">Coding</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Design" }}>
-        <button>
+        <button class= "button">
           <img src={design} alt="Design" />
+          <p class="p">Design</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Collaboration" }}>
-        <button>
+        <button class= "button">
           <img src={collaboration} alt="Collaboration" />
+          <p class="p">Collaboration</p>
         </button>
       </Link>
-
+  
       <Link to="/display" state={{ section: "Planning" }}>
-        <button>
+        <button class= "button">
           <img src={planning} alt="Planning" />
+          <p class="p">Planning</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Tutorial" }}>
-        <button>
+        <button class= "button">
           <img src={tutorials} alt="Tutorial" />
+          <p class="p">Tutorial</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Careers" }}>
-        <button>
+        <button class= "button">
           <img src={career} alt="Careers" />
+          <p class="p">Careers</p>
         </button>
       </Link>
     </div>

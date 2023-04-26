@@ -31,6 +31,10 @@
     width: 70px;
     height: 70px;
   }
+  
+  button:hover {
+    transform: scale(0.95);
+  }
 
   form {
     display: flex;
@@ -45,7 +49,6 @@
     margin-top: 20px;
     margin-bottom: 5px;
     margin-right: 200px;
-    
   }
   
   form select {
