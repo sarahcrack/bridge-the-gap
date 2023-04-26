@@ -1,3 +1,9 @@
+
+.nav-logo {
+  height: 40px; /* adjust height as needed */
+  margin-right: 20px; /* add margin as needed */
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -9,20 +15,6 @@
     height: 70px;
   }
   
-  .nav-button {
-    background-color:  #fff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  .nav-button:hover {
-    background-color:  #fff;
-    cursor: pointer;
-  }
-
   .nav-right {
     display: flex;
     flex-direction: row;
@@ -31,18 +23,20 @@
     margin-right: 20px; /* add margin as needed */
   }
   
-  .nav-icon {
-    font-size: 24px; /* adjust font-size as needed */
-    margin-left: 20px; /* add margin as needed */
-  }
-
-  .nav-logo {
-    height: 40px; /* adjust height as needed */
-    margin-right: 20px; /* add margin as needed */
-  }
-
   .nav-left {
     display: flex;
     align-items: center;
     margin-left: 20px; /* add margin as needed */
+  }
+
+  .nav-icon {
+    font-size: 24px; /* adjust font-size as needed */
+    margin-left: 20px; /* add margin as needed */
+    width: 24px; /* add a fixed width */
+    height: 24px; /* add a fixed height */
+    transition: transform 0.2s ease; /* add a transition effect */
+  }
+  
+  .nav-icon:hover {
+    transform: scale(1.2); /* scale the icon when hovered over */
   }
