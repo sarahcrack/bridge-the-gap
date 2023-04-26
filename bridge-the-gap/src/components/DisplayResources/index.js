@@ -22,9 +22,8 @@ function DisplayResources({ resources }) {
       <h1>Section: {sectionName}</h1>
 
       {resources.map((resource) => {
-        // Check if the resource's category matches the section variable
+        // Check if the resource's category matches the section passed in, or if showall is true
         if (resource.category === sectionName || showall === true) {
-          // If it matches, set foundMatchingResources to true and render the resource
           foundMatchingResources = true;
           return (
             <div className="resource-card" key={Math.random()}>
@@ -38,7 +37,7 @@ function DisplayResources({ resources }) {
                 <b>Description:</b> {resource.description}
               </p>
               <p>
-                <strong>Link:</strong>{" "}
+                <strong>Link:</strong>
                 <a href={resource.link}>{resource.link}</a>
               </p>
             </div>
