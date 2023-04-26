@@ -12,30 +12,29 @@ import "./App.css";
 import ThankYou from "./components/ThankYou";
 import Thanks from "./pages/Thanks";
 
-
 function App() {
   // create a resources state to pass down to DisplayResources
   const [resources, setResources] = useState([
     {
-      contributor: "bim",
+      contributor: "Bim",
       category: "Design",
       title: "css tricks",
-      description: "handy cheatsheet for css",
+      description: "Handy cheatsheet for css",
       link: "css-tricks.com",
     },
     {
-      contributor: "paul",
+      contributor: "Paul",
       category: "Collaboration",
-      title: "trello",
+      title: "Trello",
       description:
         "create for writing to do lists as tickets for project managing",
       link: "trello.com",
     },
     {
-      contributor: "sarah",
+      contributor: "Sarah",
       category: "Tutorials",
-      title: "react tutorial for beginners",
-      description: "react JS tutorials by Programming with Mosh",
+      title: "React tutorial for beginners",
+      description: "React JS tutorials by Programming with Mosh",
       link: "https://youtu.be/SqcYOGIETPk",
     },
   ]);
