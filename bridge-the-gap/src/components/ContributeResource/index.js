@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 function ContributeResource({ resources, setResources }) {
@@ -16,6 +17,8 @@ function ContributeResource({ resources, setResources }) {
     "Tutorials",
     "Careers",
   ]);
+
+  const navigate = useNavigate();
 
   function handleContribute(resource) {
     setResources([...resources, resource]);
@@ -36,6 +39,7 @@ function ContributeResource({ resources, setResources }) {
     setTitle("");
     setDescription("");
     setLink("");
+    navigate("/thank-you");
   }
 
   return (
