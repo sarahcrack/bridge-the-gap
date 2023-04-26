@@ -51,8 +51,12 @@ function ChooseCategory() {
           <p class="p">Careers</p>
         </button>
       </Link>
+    <div class="select">
+    <h3>Select a category</h3>
     </div>
-  );
+    </div>
+     );
+ 
 }
 
 export default ChooseCategory;
