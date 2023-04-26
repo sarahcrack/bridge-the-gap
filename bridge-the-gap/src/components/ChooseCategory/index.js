@@ -38,9 +38,9 @@ function ChooseCategory() {
         </button>
       </Link>
 
-      <Link to="/display" state={{ section: "Tutorial" }}>
+      <Link to="/display" state={{ section: "Tutorials" }}>
         <button class="button">
-          <img src={tutorials} alt="Tutorial" />
+          <img src={tutorials} alt="Tutorials" />
           <p class="p">Tutorial</p>
         </button>
       </Link>
@@ -51,12 +51,11 @@ function ChooseCategory() {
           <p class="p">Careers</p>
         </button>
       </Link>
-    <div class="select">
-    <h3>Select a category</h3>
+      <div class="select">
+        <h3>Select a category</h3>
+      </div>
     </div>
-    </div>
-     );
- 
+  );
 }
 
 export default ChooseCategory;
