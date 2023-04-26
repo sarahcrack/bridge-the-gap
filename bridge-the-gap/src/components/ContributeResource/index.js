@@ -1,3 +1,5 @@
+import { useState } from "react";
+import "./style.css";
 import { useState, useEffect } from "react";
 
 function ContributeResource({ resources, setResources }) {
@@ -7,6 +9,7 @@ function ContributeResource({ resources, setResources }) {
   const [link, setLink] = useState("");
   const [category, setCategory] = useState("");
   const [categoryList, setCategoryList] = useState([
+    "Choose a Category",
     "Coding",
     "Design",
     "Collaboration",
@@ -38,8 +41,8 @@ function ContributeResource({ resources, setResources }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className="contribute-header">Contribute a Resource</h2>
-      <label htmlFor="contributor">Contributor</label>
+      <h2 className="contribute-header"> </h2>
+      <label htmlFor="contributor">Your Name</label>
       <input
         type="text"
         id="contributor"
