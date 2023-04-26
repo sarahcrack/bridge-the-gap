@@ -9,6 +9,9 @@ import Display from "./pages/Display";
 import ContributeResource from "./components/ContributeResource";
 import DisplayResources from "./components/DisplayResources";
 import "./App.css";
+import ThankYou from "./components/ThankYou";
+import Thanks from "./pages/Thanks";
+
 
 function App() {
   // create a resources state to pass down to DisplayResources
@@ -37,11 +40,6 @@ function App() {
     },
   ]);
 
-  // create a function to update the resources state called handleContribution
-  function handleContribution(contribution) {
-    setResources([...resources, contribution]);
-  }
-
   return (
     <div>
       <BrowserRouter>
@@ -62,6 +60,7 @@ function App() {
                 <Contribute resources={resources} setResources={setResources} />
               }
             />
+            <Route path="/thank-you" element={<Thanks />} />
           </Routes>
         </div>
       </BrowserRouter>

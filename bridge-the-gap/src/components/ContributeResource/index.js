@@ -36,7 +36,12 @@ function ContributeResource({ resources, setResources }) {
       link,
     });
 
-    //redirect to display page
+    setContributor("");
+    setCategory("");
+    setTitle("");
+    setDescription("");
+    setLink("");
+
     navigate("/thank-you");
   }
 
