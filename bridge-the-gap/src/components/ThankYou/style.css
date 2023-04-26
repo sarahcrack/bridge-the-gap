@@ -12,7 +12,7 @@
   position: relative;
   top: 50%;
   left: 40%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -30%);
 }
 
 .social-media-container {
@@ -23,7 +23,7 @@
   position: relative;
   top: 20%;
   left: 40%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -45%);
 }
 
 .social-media-icons-container {
@@ -49,18 +49,11 @@
 .click-for-contribution-button {
   background-color: rgb(216, 179, 216);
   font-family: 'josefin sans', sans-serif;
-  border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 13px;
   font-weight: bold;
   cursor: pointer;
   height: 40px;
   width: 250px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 7.3);
-  position: relative;
-  top: 10%;
-  left: 40%;
-  transform: translate(-40%, -100%);
 }
-
-
