@@ -21,3 +21,6 @@
 .resource-card a {
   text-decoration: none;
 }
+.resource-image {
+  max-width: 100px;
+}

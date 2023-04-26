@@ -22,6 +22,21 @@ function DisplayResources({ resources }) {
     }
   }
 
+  function getImage(link) {
+    // if the link contains a filename in the ./Images/logos folder, return that image
+    if (link.includes("youtube")) {
+      return require("./../../Images/logos/youtube.webp");
+    } else if (link.includes("figma")) {
+      return require("./../../Images/logos/figma.png");
+    } else if (link.includes("trello")) {
+      return require("./../../Images/logos/trello.jpg");
+    } else if (link.includes("canva")) {
+      return require("./../../Images/logos/canva.png");
+    } else {
+      return require("./../../Images/logo.png");
+    }
+  }
+
   let foundMatchingResources = false;
   return (
     // Map through the resources that have been passed down from the APP
@@ -38,6 +53,11 @@ function DisplayResources({ resources }) {
             foundMatchingResources = true;
             return (
               <div className="resource-card" key={Math.random()}>
+                <img
+                  className="resource-image"
+                  src={getImage(resource.link)}
+                  alt="resource"
+                />
                 <h3>{resource.contributor}</h3>
                 <h4>
                   <b>Category: </b>
