@@ -1,5 +1,5 @@
 .contribute-header {
-    margin-top: 100px;
+    margin-top: 2px;
   }
   
   form input[type="text"], form select {
@@ -30,6 +30,7 @@
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 7.3);
     width: 70px;
     height: 70px;
+    margin-top: 30px;
   }
   
   button:hover {
