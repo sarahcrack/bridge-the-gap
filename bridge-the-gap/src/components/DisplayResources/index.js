@@ -14,6 +14,14 @@ function DisplayResources({ resources }) {
     sectionName = location.state.section;
   }
 
+  function linkify(link) {
+    if (link.includes("http://") || link.includes("https://")) {
+      return link;
+    } else {
+      return "https://" + link;
+    }
+  }
+
   let foundMatchingResources = false;
   return (
     // Map through the resources that have been passed down from the APP
@@ -41,7 +49,9 @@ function DisplayResources({ resources }) {
                 </p>
                 <p>
                   <strong>Link:</strong>
-                  <a href={resource.link}>{resource.link}</a>
+                  <a href={linkify(resource.link)} target={"_blank"}>
+                    {resource.link}
+                  </a>
                 </p>
               </div>
             );
