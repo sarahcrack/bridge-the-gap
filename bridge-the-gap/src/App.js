@@ -12,6 +12,7 @@ import "./App.css";
 import ThankYou from "./components/ThankYou";
 import Thanks from "./pages/Thanks";
 
+
 function App() {
   // create a resources state to pass down to DisplayResources
   const [resources, setResources] = useState([
@@ -32,7 +33,7 @@ function App() {
     },
     {
       contributor: "sarah",
-      category: "Tutorial",
+      category: "Tutorials",
       title: "react tutorial for beginners",
       description: "react JS tutorials by Programming with Mosh",
       link: "https://youtu.be/SqcYOGIETPk",

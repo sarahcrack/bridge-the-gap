@@ -36,9 +36,9 @@ function ChooseCategory() {
         </button>
       </Link>
 
-      <Link to="/display" state={{ section: "Tutorial" }}>
+      <Link to="/display" state={{ section: "Tutorials" }}>
         <button>
-          <img src={tutorials} alt="Tutorial" />
+          <img src={tutorials} alt="Tutorials" />
         </button>
       </Link>
 

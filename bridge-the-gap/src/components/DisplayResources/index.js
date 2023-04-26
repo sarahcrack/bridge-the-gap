@@ -21,31 +21,34 @@ function DisplayResources({ resources }) {
     <div>
       <h1>Section: {sectionName}</h1>
 
-      {resources.map((resource) => {
-        // Check if the resource's category matches the section passed in, or if showall is true
-        if (resource.category === sectionName || showall === true) {
-          foundMatchingResources = true;
-          return (
-            <div className="resource-card" key={Math.random()}>
-              <h3>{resource.contributor}</h3>
-              <h4>
-                <b>Category: </b>
-                {resource.category}
-              </h4>
-              <h4>{resource.title}</h4>
-              <p>
-                <b>Description:</b> {resource.description}
-              </p>
-              <p>
-                <strong>Link:</strong>
-                <a href={resource.link}>{resource.link}</a>
-              </p>
-            </div>
-          );
-        } else {
-          return null;
-        }
-      })}
+      {resources
+        .slice()
+        .reverse()
+        .map((resource) => {
+          // Check if the resource's category matches the section passed in, or if showall is true
+          if (resource.category === sectionName || showall === true) {
+            foundMatchingResources = true;
+            return (
+              <div className="resource-card" key={Math.random()}>
+                <h3>{resource.contributor}</h3>
+                <h4>
+                  <b>Category: </b>
+                  {resource.category}
+                </h4>
+                <h4>{resource.title}</h4>
+                <p>
+                  <b>Description:</b> {resource.description}
+                </p>
+                <p>
+                  <strong>Link:</strong>
+                  <a href={resource.link}>{resource.link}</a>
+                </p>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       {/* If no matching resources were found, display the message */}
       {!foundMatchingResources && <p>None found.</p>}
     </div>
