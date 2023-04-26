@@ -10,7 +10,7 @@ function ThankYou() {
   return (
     <div className="thank-you-container">
       <h2>Thank you for your contribution!</h2>
-      <p>You’ve helped to bridge the gap for your fellow bootcampers!</p>
+      <p>You have helped to bridge the gap for your fellow bootcampers!</p>
 
       <img src={blackArrow} alt="black arrow" className="arrow-image" />
       <div className="social-media-container">
