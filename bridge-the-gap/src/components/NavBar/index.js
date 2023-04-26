@@ -1,20 +1,29 @@
 import { Link } from "react-router-dom";
+import "./style.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faList, faEdit, faEye } from '@fortawesome/free-solid-svg-icons';
+import logo from './../../Images/logo.png';
 
 function NavBar() {
   return (
-    <div>
+    <div className="nav-bar">
+    <div className="nav-right">
+    <img src={logo} alt="Logo" className="nav-logo" />
+    </div>
+    <div className="nav-right">
       <Link to="/">
-        <button className="nav-button">Home</button>
+      <FontAwesomeIcon icon={faHome} className="nav-icon" style={{ color: 'black' }} />
       </Link>
       <Link to="/choose">
-        <button className="nav-button">Choose</button>
+      <FontAwesomeIcon icon={faList} className="nav-icon" style={{ color: 'black' }} />
       </Link>
       <Link to="/contribute">
-        <button className="nav-button">Contribute</button>
+      <FontAwesomeIcon icon={faEdit} className="nav-icon" style={{ color: 'black' }} />
       </Link>
       <Link to="/display">
-        <button className="nav-button">Display</button>
+      <FontAwesomeIcon icon={faEye} className="nav-icon" style={{ color: 'black' }} />
       </Link>
+    </div>
     </div>
   );
 }
