@@ -40,10 +40,12 @@ function ChooseCategory() {
         </button>
       </Link>
 
+
       <Link to="/display" state={{ section: "Tutorial" }}>
         <button class= "button">
           <img src={tutorials} alt="Tutorial" />
           <p class="p">Tutorial</p>
+
         </button>
       </Link>
 
