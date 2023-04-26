@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./style.css";
-import { useState, useEffect } from "react";
 
 function ContributeResource({ resources, setResources }) {
   const [contributor, setContributor] = useState("");
