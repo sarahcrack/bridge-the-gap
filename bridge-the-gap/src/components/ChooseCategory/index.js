@@ -5,6 +5,7 @@ import collaboration from "../../Images/i-collaboration.png";
 import planning from "../../Images/i-planning.png";
 import tutorials from "../../Images/i-tutorials.png";
 import career from "../../Images/i-career.png";
+import "./style.css";
 
 function ChooseCategory() {
   return (

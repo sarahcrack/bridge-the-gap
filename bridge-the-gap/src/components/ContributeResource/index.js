@@ -1,10 +1,12 @@
 import { useState } from "react";
+import "./style.css";
 
 function ContributeResource({ onContribute }) {
   const [contributor, setContributor] = useState("");
   // const [category, setCategory] = useState("");
   //make an array with categories and map through it to create a dropdown menu
   const [categories, setCategories] = useState([
+    "Choose a Category",
     "Coding",
     "Design",
     "Collaboration",
@@ -34,8 +36,8 @@ function ContributeResource({ onContribute }) {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className="contribute-header">Contribute a Resource</h2>
-      <label htmlFor="contributor">Contributor</label>
+      <h2 className="contribute-header"> </h2>
+      <label htmlFor="contributor">Your Name</label>
       <input
         type="text"
         id="contributor"
@@ -47,9 +49,9 @@ function ContributeResource({ onContribute }) {
         id="category"
         value={selectedCategory}
         onChange={(event) => setSelectedCategory(event.target.value)}
-      >
+      > 
         {categories.map((category) => (
-          <option value={category}>{category}</option>
+          <option value={category}>{category}  </option>
         ))}
       </select>
 

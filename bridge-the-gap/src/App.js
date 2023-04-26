@@ -7,6 +7,7 @@ import Contribute from "./pages/Contribute";
 import Nav from "./pages/Nav";
 import ContributeResource from "./components/ContributeResource";
 import DisplayResources from "./components/DisplayResources";
+import "./App.css"
 
 function App() {
   // create a resources state to pass down to DisplayResources
