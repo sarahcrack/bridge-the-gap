@@ -24,17 +24,23 @@ function DisplayResources({ resources }) {
   function getImage(link) {
     switch (true) {
       case link.replace(".", "").includes("youtube"):
-        return require("./../../Images/logos/youtube.webp");
+        return require("./../../Images/logos/youtube.png");
       case link.includes("figma"):
         return require("./../../Images/logos/figma.png");
       case link.includes("trello"):
-        return require("./../../Images/logos/trello.jpg");
+        return require("./../../Images/logos/trello.png");
       case link.includes("canva"):
         return require("./../../Images/logos/canva.png");
       case link.includes("w3schools"):
         return require("./../../Images/logos/w3schools.png");
       case link.includes("miro"):
         return require("./../../Images/logos/miro.png");
+      case link.includes("freecodecamp"):
+        return require("./../../Images/logos/freecodecamp.png");
+      case link.includes("codefirstgirls"):
+        return require("./../../Images/logos/codefirstgirls.png");
+      case link.includes("mozilla.org"):
+        return require("./../../Images/logos/mozilla.png");
       default:
         return require("./../../Images/logo.png");
     }
@@ -61,8 +67,9 @@ function DisplayResources({ resources }) {
                   src={getImage(resource.link)}
                   alt="resource"
                 />
-                <div class="resource-info">
-                 
+
+                <div className="resource-info">
+
                   <h4>
                     <b>Category: </b>
                     {resource.category}
