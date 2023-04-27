@@ -19,11 +19,11 @@ function HomePage() {
           <button className="nav-b">Find a resource</button>
         </Link>
       </h2>
-      <p>
+      <p className="app-description">
         Your very own learning platform, where you can find and share any tools
         throughout your bootcamp journey!
       </p>
-      <p>You build it, and you learn from it!</p>
+      <p className="app-description">You build it, and you learn from it!</p>
     </div>
   );
 }
