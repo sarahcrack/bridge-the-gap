@@ -13,7 +13,7 @@ h2 {
   color: rgb(189, 158, 189);
 }
 
-p{
+p {
   font-size: 13px;
   font-family: "josefin sans", sans-serif;
   max-width: 200px;
@@ -39,10 +39,9 @@ p{
 }
 
 .social-media-icons-container p {
- font-family: 'josfin sans', sans-serif;
+  font-family: "josfin sans", sans-serif;
   font-size: 11px;
 }
-
 
 .social-media-icons {
   display: flex;
@@ -53,9 +52,14 @@ p{
   height: 40px;
 }
 
+.facebook-link img, .instagram-link img, .linkedin-link img {
+  width: 30px;
+  height: 30px;
+}
+
 .click-for-contribution-button {
   background-color: rgb(216, 179, 216);
-  font-family: 'josefin sans', sans-serif;
+  font-family: "josefin sans", sans-serif;
   border-radius: 12px;
   font-size: 12px;
   font-weight: bold;
@@ -65,3 +69,5 @@ p{
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 7.3);
   margin-top: 20px;
 }
+
+
