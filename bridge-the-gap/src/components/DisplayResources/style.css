@@ -10,7 +10,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
-  background-color: #E8D4CD;
+  background-color: #e8d4cd;
   margin-top: 15px;
 }
 
@@ -39,12 +39,11 @@
   margin: 0.25rem 0;
 }
 
-.resource-info h3{
+.resource-info h3 {
   font-size: 8px;
   font-style: italic;
   font-weight: 100;
   align-self: flex-end;
-
 }
 
 .resource-info p {
@@ -60,4 +59,8 @@
 
 .resource-image {
   max-width: 100px;
+}
+
+.description {
+  text-align: left;
 }

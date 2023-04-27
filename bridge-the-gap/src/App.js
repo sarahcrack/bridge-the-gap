@@ -23,7 +23,9 @@ function App() {
       category: "Collaboration",
       title: "Trello",
       description:
+
         "Trello is the ultimate project management tool. Start up a board in seconds, automate tedious tasks, and collaborate anywhere, even on mobile.",
+
       link: "trello.com",
     },
     {
