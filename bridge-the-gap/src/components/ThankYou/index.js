@@ -15,11 +15,57 @@ function ThankYou() {
       <img src={blackArrow} alt="black arrow" className="arrow-image" />
       <div className="social-media-container">
         <div className="social-media-icons-container">
-        <p> Dont forget to share your contribution with other bootcampers!</p>
+          <p> Dont forget to share your contribution with other bootcampers!</p>
           <div className="social-media-icons">
-            <img src={facebook} alt="facebook logo" className="facebook-image" />
-            <img src={instagram} alt="instagram logo" className="instagram-image" />
-            <img src={linkedIn} alt="linkedin logo" className="linkedin-logo" />
+            <a
+              href={"https://www.facebook.com/schoolofcode/"}
+              target={"_blank"}
+              rel="noreferrer"
+              className="facebook-link"
+            >
+              <img
+                src={facebook}
+                alt="facebook logo"
+                className="facebook-image"
+              />
+            </a>
+            <a
+              href={"https://www.instagram.com/theschoolofcode/?hl=en"}
+              target={"_blank"}
+              rel="noreferrer"
+              className="instagram-link"
+            >
+              <img
+                src={instagram}
+                alt="instagram logo"
+                className="instagram-image"
+              />
+            </a>
+            <a
+              href={
+                "https://www.linkedin.com/school/school-of-code/?originalSubdomain=uk"
+              }
+              target={"_blank"}
+              rel="noreferrer"
+              className="linkedin-link"
+            >
+              <img
+                src={linkedIn}
+                alt="linkedin logo"
+                className="linkedin-logo"
+              />
+            </a>
+            {/* <img
+              src={facebook}
+              alt="facebook logo"
+              className="facebook-image"
+            />
+            <img
+              src={instagram}
+              alt="instagram logo"
+              className="instagram-image"
+            />
+            <img src={linkedIn} alt="linkedin logo" className="linkedin-logo" /> */}
           </div>
         </div>
       </div>
