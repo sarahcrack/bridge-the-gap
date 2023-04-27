@@ -66,26 +66,17 @@ function DisplayResources({ resources }) {
                   <img src={getImage(resource.link)} alt="resource" />
                 </div>
 
-
                 <div className="resource-info">
-
-                <h2>
-                  <FontAwesomeIcon
-                    icon={faStar}
-                    beat
-                    style={{ color: "#735d58" }}
-                  />
-                </h2>
-                
                   <div className="resource-info-title">
                     <div>
                       <h4>{resource.title}</h4>
                     </div>
                   </div>
-                  <h4>{resource.category}</h4>
+                  <div className="resource-category">{resource.category}</div>
+
                   <p className="description">{resource.description}</p>
                   <div className="resource-info-link">
-                    <p>
+                    <div>
                       <button>
                         <a
                           href={linkify(resource.link)}
@@ -95,10 +86,19 @@ function DisplayResources({ resources }) {
                           View more
                         </a>
                       </button>
-                    </p>{" "}
+                    </div>
+                    <div>
+                      <h2>
+                        <FontAwesomeIcon
+                          icon={faStar}
+                          beat
+                          style={{ color: "#735d58" }}
+                        />
+                      </h2>
+                    </div>
                   </div>
+
                   <h3>Submitted by {resource.contributor}</h3>
-                  <div></div>
                 </div>
               </div>
             );
