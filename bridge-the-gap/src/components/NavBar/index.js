@@ -24,21 +24,21 @@ function NavBar() {
               style={{ color: "black" }}
             />
           </Link>
-          <Link to="/choose">
+          <Link to="/choose" title="Choose a category">
             <FontAwesomeIcon
               icon={faList}
               className="nav-icon"
               style={{ color: "black" }}
             />
           </Link>
-          <Link to="/contribute">
+          <Link to="/contribute" title="Contribute a resource">
             <FontAwesomeIcon
               icon={faEdit}
               className="nav-icon"
               style={{ color: "black" }}
             />
           </Link>
-          <Link to="/display">
+          <Link to="/display" title="View resources">
             <FontAwesomeIcon
               icon={faEye}
               className="nav-icon"
@@ -47,8 +47,7 @@ function NavBar() {
           </Link>
         </div>
       </div>
-      <div className="nav-bar-2">
-      </div>
+      <div className="nav-bar-2"></div>
     </div>
   );
 }
