@@ -24,7 +24,7 @@ function NavBar() {
               style={{ color: "black" }}
             />
           </Link>
-          <Link to="/choose">
+          <Link to="/choose" title="Choose a category">
             <FontAwesomeIcon
               icon={faList}
               className="nav-icon"
@@ -47,8 +47,7 @@ function NavBar() {
           </Link>
         </div>
       </div>
-      <div className="nav-bar-2">
-      </div>
+      <div className="nav-bar-2"></div>
     </div>
   );
 }
