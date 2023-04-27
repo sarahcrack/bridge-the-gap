@@ -66,13 +66,17 @@ function DisplayResources({ resources }) {
                   <img src={getImage(resource.link)} alt="resource" />
                 </div>
 
+
                 <div className="resource-info">
+
+                <h2>
                   <FontAwesomeIcon
                     icon={faStar}
                     beat
                     style={{ color: "#735d58" }}
                   />
-
+                </h2>
+                
                   <h4>{resource.category}</h4>
                   <h4>{resource.title}</h4>
                   <p className="description">{resource.description}</p>

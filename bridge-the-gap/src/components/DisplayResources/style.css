@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  width: 100%;
+  width: 82%;
   height: 10%;
   padding: 2px;
   border: 1px solid #eaeaea;
@@ -34,11 +34,18 @@
   width: 100%;
 }
 
+.resource-info h2,
 .resource-info h3,
 .resource-info h4,
 .resource-info p {
   margin: 0.25rem 0;
 }
+
+.resource-info h2 {
+  align-self: flex-end;
+  font-size: 12px;
+}
+
 
 .resource-info h3 {
   font-size: 8px;
@@ -51,11 +58,31 @@
   font-size: 8px;
   margin-top: 0.25rem;
   margin-bottom: 0;
+  margin-bottom: 5px;
+
 }
 
 .resource-info p b {
   font-size: 12px;
   display: inline;
+}
+
+a {
+  font-size: 10px;
+  font-style: 'josefin sans', sans-serif;
+  color: black;
+  font-weight: bold;
+  display: inline;
+  cursor: pointer;  
+  transition: 0.5s;
+}
+
+button{
+  background-color: #cbaca1;
+  border-radius: 7px;
+  margin: 0 2px;
+  width: 66px;
+  border-color: #cbaca1;
 }
 
 .resource-image {
