@@ -62,22 +62,26 @@ function DisplayResources({ resources }) {
                   alt="resource"
                 />
                 <div class="resource-info">
-                <h3>{resource.contributor}</h3>
-                <h4>
-                  <b>Category: </b>
-                  {resource.category}
-                </h4>
-                <h4>{resource.title}</h4>
-                <p>
-                  <b>Description:</b> {resource.description}
-                </p>
-                <p>
-                  <strong>Link:</strong>
-                  <a href={linkify(resource.link)} target={"_blank"} rel="noreferrer">
-                    {resource.link}
-                  </a>
-                </p>
-              
+                  <h3>{resource.contributor}</h3>
+                  <h4>
+                    <b>Category: </b>
+                    {resource.category}
+                  </h4>
+                  <h4>{resource.title}</h4>
+                  <p>
+                    <b>Description:</b> {resource.description}
+                  </p>
+                  <p>
+                    <button>
+                      <a
+                        href={linkify(resource.link)}
+                        target={"_blank"}
+                        rel="noreferrer"
+                      >
+                        View more
+                      </a>
+                    </button>
+                  </p>
                 </div>
               </div>
             );
