@@ -1,0 +1,13 @@
+p.footer-text {
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #7c7c7c;
+  margin: 70px 0;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #e8d4cd9f;
+  height: 5px;
+  width: 600px;
+  padding: 10px;
+}

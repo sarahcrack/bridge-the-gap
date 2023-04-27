@@ -6,6 +6,7 @@ import Contribute from "./pages/Contribute";
 import Nav from "./pages/Nav";
 import Display from "./pages/Display";
 import Thanks from "./pages/Thanks";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -23,7 +24,6 @@ function App() {
       category: "Collaboration",
       title: "Trello",
       description:
-
         "Trello is the ultimate project management tool. Start up a board in seconds, automate tedious tasks, and collaborate anywhere, even on mobile.",
 
       link: "trello.com",
@@ -109,6 +109,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

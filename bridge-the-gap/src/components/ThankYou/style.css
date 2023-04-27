@@ -16,7 +16,7 @@ h2 {
 p {
   font-size: 13px;
   font-family: "josefin sans", sans-serif;
-  max-width: 200px;
+  max-width: 250px;
 }
 .arrow-image {
   width: 130px;
@@ -52,7 +52,9 @@ p {
   height: 40px;
 }
 
-.facebook-link img, .instagram-link img, .linkedin-link img {
+.facebook-link img,
+.instagram-link img,
+.linkedin-link img {
   width: 30px;
   height: 30px;
 }
@@ -69,5 +71,3 @@ p {
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 7.3);
   margin-top: 20px;
 }
-
-
