@@ -61,7 +61,7 @@ function DisplayResources({ resources }) {
                   src={getImage(resource.link)}
                   alt="resource"
                 />
-                <div class="resource-info">
+                <div className="resource-info">
                   <h3>{resource.contributor}</h3>
                   <h4>
                     <b>Category: </b>

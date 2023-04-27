@@ -37,7 +37,7 @@ function ContributeResource({ resources, setResources }) {
       alert("Please fill out all text fields");
       return;
     }
-    if (category === "Choose a Category") {
+    if (category === "") {
       alert("Please choose a category from the dropdown list");
       return;
     }
