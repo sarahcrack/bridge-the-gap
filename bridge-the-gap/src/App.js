@@ -53,7 +53,7 @@ function App() {
       category: "Tutorials",
       title: "React tutorial for beginners",
       description: "React JS tutorials by Programming with Mosh",
-      link: "https://youtu.be/SqcYOGIETPk",
+      link: "https://www.youtube.com/watch?v=SqcY0GlETPk",
       starred: false,
     },
     {
