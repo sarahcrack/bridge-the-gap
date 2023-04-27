@@ -62,11 +62,9 @@ function DisplayResources({ resources }) {
             foundMatchingResources = true;
             return (
               <div className="resource-card" key={Math.random()}>
-                <img
-                  className="resource-image"
-                  src={getImage(resource.link)}
-                  alt="resource"
-                />
+                <div className="resource-image">
+                  <img src={getImage(resource.link)} alt="resource" />
+                </div>
 
                 <div className="resource-info">
                   <FontAwesomeIcon
