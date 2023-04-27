@@ -26,7 +26,6 @@ function ContributeResource({ resources, setResources }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-
     //input validation
     if (
       contributor === "" ||

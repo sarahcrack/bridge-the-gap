@@ -17,16 +17,17 @@ function App() {
       title: "css tricks",
       description: "Handy cheatsheet for css",
       link: "css-tricks.com",
+      starred: false,
     },
     {
       contributor: "Paul",
       category: "Collaboration",
       title: "Trello",
       description:
-
         "Trello is the ultimate project management tool. Start up a board in seconds, automate tedious tasks, and collaborate anywhere, even on mobile.",
 
       link: "trello.com",
+      starred: false,
     },
     {
       contributor: "Paul",
@@ -35,6 +36,7 @@ function App() {
       description:
         "Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",
       link: "canva.com",
+      starred: false,
     },
     {
       contributor: "Paul",
@@ -43,6 +45,7 @@ function App() {
       description:
         "Whether you're brainstorming ideas, designing prototypes, or building solutions, Figma helps teams align early and stay in-sync.",
       link: "figma.com",
+      starred: false,
     },
     {
       contributor: "Sarah",
@@ -50,6 +53,7 @@ function App() {
       title: "React tutorial for beginners",
       description: "React JS tutorials by Programming with Mosh",
       link: "https://youtu.be/SqcYOGIETPk",
+      starred: false,
     },
     {
       contributor: "Umamah",
@@ -58,6 +62,7 @@ function App() {
       description:
         "An amazing whiteboard that's very helpful for collaborating on project work",
       link: "https://miro.com/app/dashboard/",
+      starred: false,
     },
     {
       contributor: "Otto",
@@ -66,6 +71,7 @@ function App() {
       description:
         "If you're looking for free coding exercises to prepare for your next job interview, this is a great site.",
       link: "https://www.freecodecamp.org/learn/coding-interview-prep/",
+      starred: false,
     },
     {
       contributor: "Ada",
@@ -74,6 +80,7 @@ function App() {
       description:
         "A great organisation that offers free courses for women and non-binary people to learn how to code.",
       link: "https://codefirstgirls.com/",
+      starred: false,
     },
     {
       contributor: "Jake",
@@ -82,6 +89,7 @@ function App() {
       description:
         "A great resource for all your coding needs whatever language you are learning!",
       link: "https://www.w3schools.com/",
+      starred: true,
     },
   ]);
 
@@ -97,7 +105,9 @@ function App() {
             <Route path="/choose" element={<Choose />} />
             <Route
               path="/display"
-              element={<Display resources={resources} />}
+              element={
+                <Display resources={resources} setResources={setResources} />
+              }
             />
             <Route
               path="/contribute"

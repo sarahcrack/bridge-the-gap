@@ -5,7 +5,6 @@ import {
   faHome,
   faList,
   faEdit,
-  faEye,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "./../../Images/logo.png";
