@@ -51,7 +51,7 @@ function DisplayResources({ resources }) {
     // Map through the resources that have been passed down from the APP
     // Display the resources one by one - resources.contributor, resources.category, resources.title, resources.description, resources.link
     <div>
-      <h1>Section: {sectionName}</h1>
+
 
       {resources
         .slice()
@@ -67,8 +67,9 @@ function DisplayResources({ resources }) {
                   src={getImage(resource.link)}
                   alt="resource"
                 />
+
                 <div className="resource-info">
-                  <h3>{resource.contributor}</h3>
+
                   <h4>
                     <b>Category: </b>
                     {resource.category}

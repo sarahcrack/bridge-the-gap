@@ -11,6 +11,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   background-color: #E8D4CD;
+  margin-top: 15px;
 }
 
 .resource-card:hover {
@@ -51,12 +52,11 @@
   margin-top: 0.25rem;
   margin-bottom: 0;
 }
+
 .resource-info p b {
   font-size: 12px;
+  display: inline;
 }
-
-
-
 
 .resource-image {
   max-width: 100px;
