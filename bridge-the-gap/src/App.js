@@ -23,7 +23,7 @@ function App() {
       category: "Collaboration",
       title: "Trello",
       description:
-        "create for writing to do lists as tickets for project managing",
+        "Great for writing to do lists as tickets for project managing",
       link: "trello.com",
     },
     {

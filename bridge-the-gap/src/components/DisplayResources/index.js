@@ -1,5 +1,7 @@
 import "./style.css";
 import { useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function DisplayResources({ resources }) {
   const location = useLocation();
@@ -51,8 +53,6 @@ function DisplayResources({ resources }) {
     // Map through the resources that have been passed down from the APP
     // Display the resources one by one - resources.contributor, resources.category, resources.title, resources.description, resources.link
     <div>
-
-
       {resources
         .slice()
         .reverse()
@@ -69,15 +69,15 @@ function DisplayResources({ resources }) {
                 />
 
                 <div className="resource-info">
+                  <FontAwesomeIcon
+                    icon={faStar}
+                    beat
+                    style={{ color: "#735d58" }}
+                  />
 
-                  <h4>
-                    <b>Category: </b>
-                    {resource.category}
-                  </h4>
+                  <h4>{resource.category}</h4>
                   <h4>{resource.title}</h4>
-                  <p>
-                    <b>Description:</b> {resource.description}
-                  </p>
+                  <p className="description">{resource.description}</p>
                   <p>
                     <button>
                       <a
@@ -89,7 +89,9 @@ function DisplayResources({ resources }) {
                       </a>
                     </button>
                   </p>
+
                   <h3>Submitted by {resource.contributor}</h3>
+                  <div></div>
                 </div>
               </div>
             );
