@@ -9,49 +9,49 @@ import { Link } from "react-router-dom";
 
 function ChooseCategory() {
   return (
-    <div class="container">
+    <div className="container">
       <Link to="/display" state={{ section: "Coding" }}>
-        <button class="button">
+        <button className="button">
           <img src={coding} alt="Coding" />
-          <p class="p">Coding</p>
+          <p className="p">Coding</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Design" }}>
-        <button class="button">
+        <button className="button">
           <img src={design} alt="Design" />
-          <p class="p">Design</p>
+          <p className="p">Design</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Collaboration" }}>
-        <button class="button">
+        <button className="button">
           <img src={collaboration} alt="Collaboration" />
-          <p class="p">Collaboration</p>
+          <p className="p">Collaboration</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Planning" }}>
-        <button class="button">
+        <button className="button">
           <img src={planning} alt="Planning" />
-          <p class="p">Planning</p>
+          <p className="p">Planning</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Tutorials" }}>
-        <button class="button">
+        <button className="button">
           <img src={tutorials} alt="Tutorials" />
-          <p class="p">Tutorial</p>
+          <p className="p">Tutorial</p>
         </button>
       </Link>
 
       <Link to="/display" state={{ section: "Careers" }}>
-        <button class="button">
+        <button className="button">
           <img src={career} alt="Careers" />
-          <p class="p">Careers</p>
+          <p className="p">Careers</p>
         </button>
       </Link>
-      <div class="select">
+      <div className="select">
         <h3>Select a category</h3>
       </div>
     </div>
