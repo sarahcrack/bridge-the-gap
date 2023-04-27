@@ -27,6 +27,21 @@ function ContributeResource({ resources, setResources }) {
   function handleSubmit(event) {
     event.preventDefault();
 
+    //input validation
+    if (
+      contributor === "" ||
+      title === "" ||
+      description === "" ||
+      link === ""
+    ) {
+      alert("Please fill out all text fields");
+      return;
+    }
+    if (category === "") {
+      alert("Please choose a category from the dropdown list");
+      return;
+    }
+
     handleContribute({
       contributor,
       category,
