@@ -3,14 +3,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 120%;
-  height: 20%;
+  width: 100%;
+  height: 10%;
   padding: 1rem;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   font-family: "josfin sans", sans-serif;
+  font-size: 12px;
+  background-color: #E8D4CD;
 }
 
 .resource-card:hover {

@@ -73,7 +73,7 @@ function DisplayResources({ resources }) {
                 </p>
                 <p>
                   <strong>Link:</strong>
-                  <a href={linkify(resource.link)} target={"_blank"}>
+                  <a href={linkify(resource.link)} target={"_blank"} rel="noreferrer">
                     {resource.link}
                   </a>
                 </p>
