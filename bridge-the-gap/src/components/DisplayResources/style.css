@@ -52,12 +52,11 @@
   margin-top: 0.25rem;
   margin-bottom: 0;
 }
+
 .resource-info p b {
   font-size: 12px;
+  display: inline;
 }
-
-
-
 
 .resource-image {
   max-width: 100px;
