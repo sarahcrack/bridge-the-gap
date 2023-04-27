@@ -4,6 +4,7 @@
   justify-content: left;
   align-items: center;
   max-width: 260px;
+  min-width: 260px;
   padding: 2px;
   border: 1px solid #eaeaea;
   border-radius: 10px;
