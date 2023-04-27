@@ -17,7 +17,7 @@ function NavBar() {
           <img src={logo} alt="Logo" className="nav-logo" />
         </div>
         <div className="nav-right">
-          <Link to="/">
+          <Link to="/" title="Home">
             <FontAwesomeIcon
               icon={faHome}
               className="nav-icon"
