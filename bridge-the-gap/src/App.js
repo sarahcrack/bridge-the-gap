@@ -23,8 +23,26 @@ function App() {
       category: "Collaboration",
       title: "Trello",
       description:
-        "Great for writing to do lists as tickets for project managing",
+
+        "Trello is the ultimate project management tool. Start up a board in seconds, automate tedious tasks, and collaborate anywhere, even on mobile.",
+
       link: "trello.com",
+    },
+    {
+      contributor: "Paul",
+      category: "Collaboration",
+      title: "Canva",
+      description:
+        "Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",
+      link: "canva.com",
+    },
+    {
+      contributor: "Paul",
+      category: "Collaboration",
+      title: "Figma",
+      description:
+        "Whether you're brainstorming ideas, designing prototypes, or building solutions, Figma helps teams align early and stay in-sync.",
+      link: "figma.com",
     },
     {
       contributor: "Sarah",
