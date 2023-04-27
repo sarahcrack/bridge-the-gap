@@ -62,7 +62,7 @@ function DisplayResources({ resources }) {
                   alt="resource"
                 />
                 <div class="resource-info">
-                  <h3>{resource.contributor}</h3>
+                  
                   <h4>
                     <b>Category: </b>
                     {resource.category}
@@ -82,6 +82,7 @@ function DisplayResources({ resources }) {
                       </a>
                     </button>
                   </p>
+                  <h3>Submitted by {resource.contributor}</h3>
                 </div>
               </div>
             );

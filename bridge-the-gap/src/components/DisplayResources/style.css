@@ -10,8 +10,6 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
-  font-family: "josfin sans", sans-serif;
-  font-size: 12px;
   background-color: #E8D4CD;
 }
 
@@ -29,8 +27,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
+  font-family: "josfin sans", sans-serif;
+  font-size: 12px;
+  margin-right: 10px;
 }
+
+.resource-info h3,
+.resource-info h4,
+.resource-info p {
+  margin: 0.25rem 0;
+}
+
+.resource-info h3{
+  font-size: 8px;
+  font-style: italic;
+  font-weight: 100;
+  align-self: flex-end;
+
+}
+
+.resource-info p {
+  font-size: 8px;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+.resource-info p b {
+  font-size: 12px;
+}
+
+
+
 
 .resource-image {
   max-width: 100px;
