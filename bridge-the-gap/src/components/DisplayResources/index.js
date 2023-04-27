@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-function DisplayResources({ resources }) {
+function DisplayResources({ resources, setResources }) {
   const location = useLocation();
   //check if location.state.section is null
   let showall = false;
@@ -21,6 +21,20 @@ function DisplayResources({ resources }) {
     } else {
       return "https://" + link;
     }
+  }
+
+  // function handleContribute(resource) {
+  //   setResources([...resources, resource]);
+  // }
+
+  function handleStarClick(resource) {
+    // const updatedResources = resources.map((res) => {
+    //   if (res === resource) {
+    //     return { ...res, starred: !res.starred };
+    //   }
+    //   return res;
+    // });
+    // handleContribute(updatedResources);
   }
 
   function getImage(link) {
@@ -87,14 +101,15 @@ function DisplayResources({ resources }) {
                         </a>
                       </button>
                     </div>
-                    <div>
-                      <h2>
-                        <FontAwesomeIcon
-                          icon={faStar}
-                          beat
-                          style={{ color: "#735d58" }}
-                        />
-                      </h2>
+                    <div onClick={() => handleStarClick(resource)}>
+                      <FontAwesomeIcon
+                        icon={faStar}
+                        {...(resource.starred
+                          ? { style: { color: "#d7b200" } }
+                          : { style: { color: "#735d58" } })}
+                        beat
+                        // style={{ color: "#735d58" }}
+                      />
                     </div>
                   </div>
 
