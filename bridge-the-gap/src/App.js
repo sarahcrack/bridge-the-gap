@@ -33,6 +33,38 @@ function App() {
       description: "React JS tutorials by Programming with Mosh",
       link: "https://youtu.be/SqcYOGIETPk",
     },
+    {
+      contributor: "Umamah",
+      category: "Planning",
+      title: "Miro",
+      description:
+        "An amazing whiteboard that's very helpful for collaborating on project work",
+      link: "https://miro.com/app/dashboard/",
+    },
+    {
+      contributor: "Otto",
+      category: "Careers",
+      title: "freeCodeCamp - Interview prep",
+      description:
+        "If you're looking for free coding exercises to prepare for your next job interview, this is a great site.",
+      link: "https://www.freecodecamp.org/learn/coding-interview-prep/",
+    },
+    {
+      contributor: "Ada",
+      category: "Tutorials",
+      title: "Code First Girls",
+      description:
+        "A great organisation that offers free courses for women and non-binary people to learn how to code.",
+      link: "https://codefirstgirls.com/",
+    },
+    {
+      contributor: "Jake",
+      category: "Coding",
+      title: "W3 Schools",
+      description:
+        "A great resource for all your coding needs whatever language you are learning!",
+      link: "https://www.w3schools.com/",
+    },
   ]);
 
   return (
