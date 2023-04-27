@@ -6,6 +6,7 @@ import {
   faList,
   faEdit,
   faEye,
+  faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "./../../Images/logo.png";
 
@@ -43,7 +44,7 @@ function NavBar() {
           </Link>
           <Link to="/display" title="View resources">
             <FontAwesomeIcon
-              icon={faEye}
+              icon={faMagnifyingGlass}
               className="nav-icon"
               style={{ color: "black" }}
             />
