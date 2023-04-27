@@ -13,9 +13,12 @@ function NavBar() {
   return (
     <div>
       <div className="nav-bar">
-        <div className="nav-right">
-          <img src={logo} alt="Logo" className="nav-logo" />
-        </div>
+        <Link to="/" title="Home">
+          <div className="nav-right">
+            <img src={logo} alt="Logo" className="nav-logo" />
+          </div>
+        </Link>
+
         <div className="nav-right">
           <Link to="/" title="Home">
             <FontAwesomeIcon

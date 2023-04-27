@@ -92,3 +92,17 @@ button{
 .description {
   text-align: left;
 }
+
+.resource-info-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.resource-info-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
