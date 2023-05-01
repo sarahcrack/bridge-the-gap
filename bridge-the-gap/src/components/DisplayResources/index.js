@@ -23,43 +23,32 @@ function DisplayResources({ resources, setResources }) {
     }
   }
 
-  // function handleContribute(resource) {
-  //   setResources([...resources, resource]);
-  // }
-
   function handleStarClick(resource) {
-    // const updatedResources = resources.map((res) => {
-    //   if (res === resource) {
-    //     return { ...res, starred: !res.starred };
-    //   }
-    //   return res;
-    // });
-    // handleContribute(updatedResources);
+    const swapped = resource.starred;
+    resource.starred = !swapped;
+
+    setResources([...resources]);
   }
 
   function getImage(link) {
-    switch (true) {
-      case link.replace(".", "").includes("youtube"):
-        return require("./../../Images/logos/youtube.png");
-      case link.includes("figma"):
-        return require("./../../Images/logos/figma.png");
-      case link.includes("trello"):
-        return require("./../../Images/logos/trello.png");
-      case link.includes("canva"):
-        return require("./../../Images/logos/canva.png");
-      case link.includes("w3schools"):
-        return require("./../../Images/logos/w3schools.png");
-      case link.includes("miro"):
-        return require("./../../Images/logos/miro.png");
-      case link.includes("freecodecamp"):
-        return require("./../../Images/logos/freecodecamp.png");
-      case link.includes("codefirstgirls"):
-        return require("./../../Images/logos/codefirstgirls.png");
-      case link.includes("mozilla.org"):
-        return require("./../../Images/logos/mozilla.png");
-      default:
-        return require("./../../Images/logo.png");
+    let imageArray = [
+      "youtube",
+      "figma",
+      "trello",
+      "canva",
+      "w3schools",
+      "miro",
+      "freecodecamp",
+      "codefirstgirls",
+      "mozilla.org",
+    ];
+
+    for (let i = 0; i < imageArray.length; i++) {
+      if (link.replace(".", "").includes(imageArray[i])) {
+        return require("./../../Images/logos/" + imageArray[i] + ".png");
+      }
     }
+    return require("./../../Images/logo.png");
   }
 
   let foundMatchingResources = false;
@@ -69,7 +58,7 @@ function DisplayResources({ resources, setResources }) {
     <div>
       {resources
         .slice()
-        .reverse()
+        .sort((a, b) => (b.starred ? 1 : -1)) // Sort by `starred` property
         .map((resource) => {
           // Check if the resource's category matches the section passed in, or if showall is true
           if (resource.category === sectionName || showall === true) {
@@ -101,15 +90,17 @@ function DisplayResources({ resources, setResources }) {
                         </a>
                       </button>
                     </div>
-                    <div onClick={() => handleStarClick(resource)}>
-                      <FontAwesomeIcon
-                        icon={faStar}
-                        {...(resource.starred
-                          ? { style: { color: "#d7b200" } }
-                          : { style: { color: "#735d58" } })}
-                        beat
-                        // style={{ color: "#735d58" }}
-                      />
+                    <div>
+                      <button onClick={() => handleStarClick(resource)}>
+                        <FontAwesomeIcon
+                          icon={faStar}
+                          {...(resource.starred
+                            ? { style: { color: "#d7b200" } }
+                            : { style: { color: "#735d58" } })}
+                          beat
+                          // style={{ color: "#735d58" }}
+                        />
+                      </button>
                     </div>
                   </div>
 
