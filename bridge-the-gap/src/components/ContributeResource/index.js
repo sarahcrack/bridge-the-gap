@@ -8,15 +8,6 @@ function ContributeResource({ resources, setResources }) {
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
   const [category, setCategory] = useState("");
-  const [categoryList, setCategoryList] = useState([
-    "Choose a Category",
-    "Coding",
-    "Design",
-    "Collaboration",
-    "Planning",
-    "Tutorials",
-    "Careers",
-  ]);
 
   const navigate = useNavigate();
 
@@ -69,11 +60,13 @@ function ContributeResource({ resources, setResources }) {
         value={category}
         onChange={(event) => setCategory(event.target.value)}
       >
-        {categoryList.map((cat) => (
-          <option value={cat} key={Math.random()}>
-            {cat}
-          </option>
-        ))}
+        <option value="">Choose a Category</option>
+        <option value="Coding">Coding</option>
+        <option value="Design">Design</option>
+        <option value="Collaboration">Collaboration</option>
+        <option value="Planning">Planning</option>
+        <option value="Tutorials">Tutorials</option>
+        <option value="Careers">Careers</option>
       </select>
 
       <label htmlFor="title">Title</label>
