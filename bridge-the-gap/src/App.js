@@ -84,7 +84,7 @@ function App() {
       starred: false,
     },
     {
-      contributor: "Jake",
+      contributor: "Paul",
       category: "Coding",
       title: "W3 Schools",
       description:
